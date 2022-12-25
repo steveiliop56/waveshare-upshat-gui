@@ -1,0 +1,58 @@
+@import url(https://fonts.googleapis.com/css?family=Bungee);
+@import url(https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap);
+
+h1 {
+    text-align: center;
+    font-family: 'M PLUS Rounded 1c';
+}
+
+body {
+    background-color: #dab600;
+}
+
+p {
+    text-align: left;
+    text-decoration-color: black;
+    margin-left: 50px;
+    font-family: 'M PLUS Rounded 1c';
+}
+
+.centered {
+    position: fixed;
+    top: 30%; 
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -200px;
+    border-style: solid; 
+    border-radius: 10px;
+    border-color: white;
+    background-color: white;
+    height: 300px;
+    width: 400px;
+  }
+
+#space {
+    height: 10px;
+    width: 60px;
+}
+
+#actionl {
+    display: inline-block;
+    text-align: left;
+    text-decoration-color: black;
+    margin-left: 50px;
+    margin-top: 10px;
+    font-family: 'M PLUS Rounded 1c';
+}
+
+
+select {
+    text-align: center;
+    margin-left: 120px;
+    margin-top: 15px;
+    width: 30%;
+    padding: 7px 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(9, 105, 54);
+}

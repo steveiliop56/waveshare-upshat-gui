@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    {% load static %}
+    <head>
+        <title>UPS Status</title>
+        <link rel="stylesheet" href="{% static 'app/style.css' %}">
+    </head>
+    <body>
+        <h1>Welcome to UPS status dashboard!</h1>
+        <div class="centered">
+            <div id="space"></div>
+            <p>Load Voltage: &emsp;&emsp;&emsp;&emsp;&emsp;{{ voltage }}</p>
+            <p>Current: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;{{ current }}</p>
+            <p>Power: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{{ power }}</p>
+            <p>Percent: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;{{ percent }}</p>
+            <label id="actionl">Shutdown when battery percent is: </label>
+
+            <select id="action" onchange="changeFunc();">
+                <option value="1">1 %</option>
+                <option value="2">2 %</option>
+                <option value="5">5 %</option>
+                <option value="10">10 %</option>
+            </select>
+
+        </div>
+        <script>
+            function autoRefreshPage() {
+                window.location = window.location.href;
+            }
+            setInterval('autoRefreshPage()', 5000);
+            function changeFunc() {
+                var selectBox = document.getElementById("action");
+                var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+                alert("Raspberry pi will shutdown when battery percent is below: " + selectedValue + "%");
+                let r = new XMLHttpRequest();
+                r.open("get", "http://100.88.54.69:8080/api/sv" + selectedValue.toString());
+                r.send();
+            }
+            //function powerreq(option) {
+                // document.getElementById("opt" + option.toString())
+            //    document.getElementById('personlist').value=Person_ID;
+            //    const msg = new Notification("You selected: " + option + " %.");
+            //    msg.close();
+                // let r = new XMLHttpRequest()
+                // r.open("get", "http://10.0.0.1/api/robot/" + robot.toString())
+                // r.send()
+            //}
+        </script>
+    </body>
+</html>
