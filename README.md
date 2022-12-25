@@ -20,7 +20,7 @@ cd waveshare-upshat-gui
 python3 -m pip install django
 ```
 
-Then got to app/templates/index.html and update this line ```r.open("get", "http://100.88.54.69:1414/api/sv" + selectedValue.toString());``` with your raspberry pi ip address. For example if your ip address is 10.0.0.1 make this line look like this: ```r.open("get", "http://10.0.0.1:1414/api/sv" + selectedValue.toString());``` Note that this is a key component for the safe shutdown function to work.
+Then got to app/templates/index.html and update this line ```r.open("get", "http://100.88.54.69:5151/api/sv" + selectedValue.toString());``` with your raspberry pi ip address. For example if your ip address is 10.0.0.1 make this line look like this: ```r.open("get", "http://10.0.0.1:5151/api/sv" + selectedValue.toString());``` Note that this is a key component for the safe shutdown function to work.
 
 ## Running
 
