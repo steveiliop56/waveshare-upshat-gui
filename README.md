@@ -27,7 +27,7 @@ Then got to app/templates/index.html and update this line ```r.open("get", "http
 To run cd into the waveshare-upshat-gui direcotry and run the following command:
 
 ```sh
-sudo python3 manage.py runserver 127.0.0.1:1414
+sudo python3 manage.py runserver 127.0.0.1:5151
 ```
 
 **Warning:** The script **requires** root privleges in order for the safe shutdown function to work, so make sure to use sudo.
