@@ -2,7 +2,7 @@
 
 ## The story.
 
-So, I bought a [waveshare ups hat (type A)](https://www.waveshare.com/wiki/UPS_HAT) for my raspberry pi, but the example code was a simple python I2C reader for the [ina219](https://www.ti.com/lit/gpn/ina219) chip. Inspired from pisgugar's 3 [web gui](https://github.com/PiSugar/PiSugar/wiki/PiSugar2) and build my own simpler interface that you can see in the screenshot bellow: 
+So, I bought a [waveshare ups hat (type A)](https://www.waveshare.com/wiki/UPS_HAT) for my raspberry pi, but the example code was a simple python I2C reader for the [ina219](https://www.ti.com/lit/gpn/ina219) chip. Inspired from pisgugar's 3 [web gui](https://github.com/PiSugar/PiSugar/wiki/PiSugar2), I build my own simpler interface that you can see in the screenshot bellow: 
 
 <br>
 
