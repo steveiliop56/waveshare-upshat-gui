@@ -30,4 +30,10 @@ To run cd into the waveshare-upshat-gui direcotry and run the following command:
 sudo python3 manage.py runserver 127.0.0.1:5151
 ```
 
+There is also a terminal version that you can run with this command *(does not include auto shutdown)* :
+
+```sh
+sudo python3 uphat.py
+```
+
 **Warning:** The script **requires** root privleges in order for the safe shutdown function to work, so make sure to use sudo.
