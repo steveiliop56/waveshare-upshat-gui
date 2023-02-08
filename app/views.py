@@ -28,12 +28,15 @@ thread.start()
 def setpowerlimit():
   global powershut
   while True:
-    powershut = powershut
-    batpower = float("{:3.1f}".format(p))
-    if batpower <= powershut:
-      print("Shutting down in 5 seconds!")
-      time.sleep(5)
-      os.system("sudo poweroff")
+    if current >= 1:
+      pass
+    else:
+      powershut = powershut
+      batpower = float("{:3.1f}".format(p))
+      if batpower <= powershut:
+        print("Shutting down in 5 seconds!")
+        time.sleep(5)
+        os.system("sudo poweroff")
       
 
 thread = threading.Thread(target=setpowerlimit)

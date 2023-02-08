@@ -33,7 +33,7 @@
                 var selectedValue = selectBox.options[selectBox.selectedIndex].value;
                 alert("Raspberry pi will shutdown when battery percent is below: " + selectedValue + "%");
                 let r = new XMLHttpRequest();
-                r.open("get", "http://100.88.54.69:5151/api/sv" + selectedValue.toString());
+                r.open("get", "http://100.88.54.69:8080/api/sv" + selectedValue.toString());
                 r.send();
             }
             //function powerreq(option) {
